@@ -1,0 +1,6 @@
+<h5>{{ todo.name }}</h5>
+<p>Todo is {{ todo.completed ? 'completed' : 'not completed' }}.</p>
+
+<a [routerLink]="['/todos', todo.id, 'edit']"
+   [queryParams]="{ 'is-valid': true, edit: false }"
+   fragment="load">Edit {{ todo.name }}</a>

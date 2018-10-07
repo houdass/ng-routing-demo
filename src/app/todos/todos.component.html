@@ -1,0 +1,18 @@
+<br>
+<div class="row">
+  <div class="col-xs-12 col-sm-4">
+    <div class="list-group">
+      <a class="list-group-item"
+         [routerLink]="['/todos', todo.id]"
+         queryParamsHandling="preserve"
+         [queryParams]="{ name: 'youness' }"
+         *ngFor="let todo of todos">
+         {{ todo.name }}
+      </a>
+    </div>
+  </div>
+  <div class="col-xs-12 col-sm-4">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
